@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Iraya</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+<body>
+    <div class="wrapper-div">
+    <div id="logo-nav-div" class="clearfix">
+        <div id="logo-div">
+            <img src="Iraya_Logo.png" alt="Iraya logo">
+       </div>
+    
+       <div id="nav-div">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Blank</a>
+            <a href="#">Blank</a>
+            <a href="#">Contact</a>
+       </div>
+       </div>
+    
+       <div id="main-div" class="clearfix">
+            <div id="sidebar-div">
+                <a href="#">Home</a><br><br>
+                <a href="#">About</a><br><br>
+                <a href="#">Blank</a><br><br>
+                <a href="#">Blank</a><br><br>
+                <a href="#">Contact</a><br><br>
+            </div>
+
+            <div id="bodyarea-div">
+                <div id="wrap">
+                <div class="container">
+                    <div class="mySlides">
+                      <div class="numbertext">1 / 5</div>
+                      <img src="https://drumcreative.com/wp-content/uploads/2017/10/logo-graphic-design-blue-letters.jpg" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides">
+                      <div class="numbertext">2 / 5</div>
+                      <img src="https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2021/06/neural-filters-tutorial-for-adobe-photoshop-cc-lightroom-editing-ai-automated-frequency-separation-portrait-retouching-2021.jpg" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides">
+                      <div class="numbertext">3 / 5</div>
+                      <img src="https://uschamber-co.imgix.net/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fco-assets%2Fassets%2Fimages%2Fvideo-editing-software.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fm=jpg&fp-x=0.6038&fp-y=0.2953&h=630&q=80&w=1200&s=e4cd9747c8ad6c7ca16107c212a79125" style="width:100%">
+                    </div>
+                      
+                    <div class="mySlides">
+                      <div class="numbertext">4 / 5</div>
+                      <img src="https://arcadiaquill.com/wp-content/uploads/2019/05/character-design.png" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides">
+                      <div class="numbertext">5 / 5</div>
+                      <img src="https://cdn.logojoy.com/wp-content/uploads/20231122153748/what-is-graphic-design-header.jpg" style="width:100%">
+                    </div>
+                    </div>
+                      
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                  
+                    <div class="caption-container">
+                      <p id="caption"></p>
+                    </div>
+                  
+                    <div class="row">
+                      <div class="column">
+                        <img class="demo cursor" src="https://drumcreative.com/wp-content/uploads/2017/10/logo-graphic-design-blue-letters.jpg" style="width:100%" onclick="currentSlide(1)" alt="Logo Design">
+                      </div>
+                      <div class="column">
+                        <img class="demo cursor" src="https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2021/06/neural-filters-tutorial-for-adobe-photoshop-cc-lightroom-editing-ai-automated-frequency-separation-portrait-retouching-2021.jpg" style="width:100%" onclick="currentSlide(2)" alt="Photo Editing">
+                      </div>
+                      <div class="column">
+                        <img class="demo cursor" src="https://uschamber-co.imgix.net/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fco-assets%2Fassets%2Fimages%2Fvideo-editing-software.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fm=jpg&fp-x=0.6038&fp-y=0.2953&h=630&q=80&w=1200&s=e4cd9747c8ad6c7ca16107c212a79125" style="width:100%" onclick="currentSlide(3)" alt="Video Editing">
+                      </div>
+                      <div class="column">
+                        <img class="demo cursor" src="https://arcadiaquill.com/wp-content/uploads/2019/05/character-design.png" style="width:100%" onclick="currentSlide(4)" alt="Character Design">
+                      </div>
+                      <div class="column">
+                        <img class="demo cursor" src="https://cdn.logojoy.com/wp-content/uploads/20231122153748/what-is-graphic-design-header.jpg" style="width:100%" onclick="currentSlide(5)" alt="Graphic Design">
+                      </div>    
+                    </div>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+
+       </div>
+
+       <div id="footer-div" class="clearfix">
+            <div id="footer-logo-div">
+                <img src="Iraya_Logo.png" alt="Iraya logo">
+            </div>
+        
+            <div id="footer-info-div">
+                Shane D. Oxina <br>
+                oxinashane@gmail.com
+            </div>
+       </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("demo");
+          let captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+</body>
+</html>
